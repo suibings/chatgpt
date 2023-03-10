@@ -33,7 +33,7 @@ export const post: APIRoute = async context => {
   const completion = await fetch("https://api.openai.com/v1/chat/completions", {
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer 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`
+      Authorization: `Bearer ${key}`
     },
     method: "POST",
     body: JSON.stringify({
