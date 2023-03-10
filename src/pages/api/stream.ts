@@ -23,7 +23,6 @@ export const post: APIRoute = async context => {
   const decoder = new TextDecoder()
 
   if (!key.startsWith("sk-")) key = apiKey
-  key = "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"
   if (!key) {
     return new Response("没有填写 OpenAI API key")
   }
@@ -34,7 +33,7 @@ export const post: APIRoute = async context => {
   const completion = await fetch("https://api.openai.com/v1/chat/completions", {
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${key}`
+      Authorization: `Bearer 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`
     },
     method: "POST",
     body: JSON.stringify({
