@@ -16,13 +16,13 @@ export const post: APIRoute = async context => {
   const body = await context.request.json()
   const apiKey = apiKeys.length
     ? apiKeys[Math.floor(Math.random() * apiKeys.length)]
-    : ""
+    : "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"
   let { messages, key = apiKey, temperature = 0.6 } = body
 
   const encoder = new TextEncoder()
   const decoder = new TextDecoder()
 
-  if (!key.startsWith("sk-")) key = apiKey
+  if (!key.startsWith("sk-")) key = "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"
   if (!key) {
     return new Response("没有填写 OpenAI API key")
   }
