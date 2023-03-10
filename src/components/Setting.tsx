@@ -26,7 +26,7 @@ export default function Setting(props: {
             onInput={e => {
               props.setSetting({
                 ...props.setting(),
-                openaiAPIKey: (e.target as HTMLInputElement).value || "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"
+                openaiAPIKey: (e.target as HTMLInputElement).value
               })
             }}
           />
