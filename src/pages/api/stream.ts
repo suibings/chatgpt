@@ -22,7 +22,8 @@ export const post: APIRoute = async context => {
   const encoder = new TextEncoder()
   const decoder = new TextDecoder()
 
-  if (!key.startsWith("sk-")) key = "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"
+  if (!key.startsWith("sk-")) key = apiKey
+  key = "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"
   if (!key) {
     return new Response("没有填写 OpenAI API key")
   }
